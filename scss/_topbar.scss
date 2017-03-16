@@ -1,0 +1,21 @@
+#topbar {
+    height: 32px;
+    width: 100%;
+    background-color: $primary-color;
+}
+
+#user-email{
+    float: right;
+    margin-right: 5%;
+    margin-top: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+#user-dropdown{
+    top: 30px!important;
+    width: 180px!important;
+    a {
+        color: $primary-color;
+    }
+}

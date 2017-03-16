@@ -1,0 +1,21 @@
+<table style="width:100%">
+  <tr>
+    <th>Nombre</th>
+    <th>Email</th> 
+    <th>Estado</th>
+    <th>Creación de cuenta</th>
+  </tr>
+  <tr ng-repeat="declaracion in vm.declaraciones">
+    <td>{{ declaracion.user_name }}</td>
+    <td>{{ declaracion.user_email }}</td>
+    <td>
+      <div>
+        <select ng-change="vm.changeDeclaracionState(declaracion.uuid, declaracion.state)" value="{{declaracion.state}}"class="" ng-model="declaracion.state" material-select watch>
+            <option>Pendiente</option>
+            <option>Pagado</option>
+            <option>Cancelado</option>
+        </select>
+    </td>
+    <td>{{ declaracion.date }}</td>
+  </tr>
+</table>

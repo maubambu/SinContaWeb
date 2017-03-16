@@ -1,0 +1,33 @@
+$background-color: #F2F5F5;
+
+.nav-content .tabs {
+    margin-top: 15px;
+    padding-left: 30px;
+
+    img {
+        margin-right: 15px;
+    }
+
+    .tab {
+        width: 13%;
+        a {
+            color: $light-gray-color;
+        }
+
+        a.active{
+            color: black;
+            border-bottom: $primary-color 4px solid;
+        }
+    }
+    
+}
+
+.nav-content .tabs .tab:hover a{
+    color: black;
+    border-bottom: $primary-color 4px solid;
+}
+
+#main-container {
+    height: calc(100vh - 95px);
+    background-color: $background-color;
+}

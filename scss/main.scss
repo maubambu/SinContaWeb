@@ -1,0 +1,66 @@
+
+$primary-color: #8DC640;
+$landing-image: url('/img/bg.png');
+$light-gray-color: #9e9e9e;
+$table-border-color: rgba(158,158,158,0.15);
+
+@import 'topbar';
+@import 'dashboard';
+@import 'declaraciones';
+
+.btn{
+    background-color: $primary-color!important;
+}
+
+[type="checkbox"].filled-in:checked+label:after{
+    border: 2px solid $primary-color!important;
+    background-color: $primary-color!important;
+}
+
+
+#landing-bg {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: $landing-image no-repeat center;
+    background-size: cover;
+}
+
+#login-container{
+    height: 100vh;
+
+    h1 {
+        margin-bottom: 50px;
+        font-size: 40px;
+        color: $primary-color;
+    }
+
+    p {
+        color: $light-gray-color;
+        text-align: center;
+    }
+
+    #login-form{
+        margin: 0 auto;
+        width: 65%;
+    }
+}
+
+
+table {
+    font-size: 16px;
+    th{
+        color: $light-gray-color;
+        font-weight: normal;
+        
+    }
+
+    tr{
+        border-bottom: 1px solid $table-border-color;
+    }
+
+    th:first-child, td:first-child {
+        padding-left: 40px;
+    }
+
+}

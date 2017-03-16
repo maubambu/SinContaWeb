@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>SinConta</title>
+</head>
+<body ng-app="sinconta" ng-controller="AppController">
+    <ui-view></ui-view>
+</body>
+
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/angular/angular.min.js"></script>
+    <script src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script src="/node_modules/angular-materialize/src/angular-materialize.min.js"></script>
+    <script src="/src/app.js"></script>
+    <script src="/src/services/data.service.js"></script>
+    <script src="/src/routes.js"></script>
+    <script src="/src/components/login_component/login.js"></script>
+    <script src="/src/components/topbar_component/topbar.js"></script>
+    <script src="/src/components/dashboard_component/dashboard.js"></script>
+    <script src="/src/components/declaraciones_component/declaraciones.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBbU5CnZwOQlxm5z-BImAxnnWDAUfREsbA",
+            authDomain: "sincontaexample.firebaseapp.com",
+            databaseURL: "https://sincontaexample.firebaseio.com",
+            storageBucket: "sincontaexample.appspot.com",
+            messagingSenderId: "104205094656"
+        };
+        firebase.initializeApp(config);
+    </script>
+</html>
