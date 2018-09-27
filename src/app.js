@@ -5,9 +5,16 @@
 
     function AppController($state, $rootScope){
         firebase.auth().onAuthStateChanged(function(user) {
-            if (user && user.uid === '9AoxBl06IedU7IWA83hRERhlOUg1') {
-                $rootScope.user = user;
-                $state.go('dashboard.declaraciones');
+            if (user) {
+                firebase.database().ref(`/roles/${user.uid}`).once("value", function (response) {
+                    let val = response.val();
+                    if (val && val.admin == true) {
+                        $rootScope.user = user;
+                        $state.go('dashboard.declaraciones');
+                    } else {
+                        console.error("User is not an admin");
+                    }
+                })
             } else {
                 $state.go('login');
             }

@@ -11,7 +11,7 @@
         service.getDeclaraciones = getDeclaraciones;
         service.updateDeclaracion = updateDeclaracion
 
-        var declaracionesTable = firebase.database().ref("/Declaraciones");
+        var declaracionesTable = firebase.database().ref("/declarations");
 
         function getDeclaraciones(callback){
             declaracionesTable.once('value', function(snapshot){

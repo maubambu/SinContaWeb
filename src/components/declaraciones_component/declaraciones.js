@@ -23,8 +23,9 @@
 
         firebase.auth().onAuthStateChanged(function(user) {
             if (user){
-                dataService.getDeclaraciones(function(declaraciones){
-                    $scope.$apply(vm.declaraciones = declaraciones);
+                dataService.getDeclaraciones(function (declaraciones) {
+                    vm.declaraciones = declaraciones;
+                    $scope.$apply();
                 })
             }
         });
